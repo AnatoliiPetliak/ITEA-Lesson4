@@ -1,23 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import Chart from "./Task1/Chart";
+import Helper from "./Task2/helper";
+import DemoUseEffect from "./Task4/DemoUseEffect";
+import TableWrapper from "./Task3/TableWrapper";
+
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Chart />
+      <hr size="4" color="black" />
+      <Helper />
+      <hr size="4" color="black" />
+      <TableWrapper />
+
+      <hr size="4" color="black" />
+
+      <hr size="4" color="black" />
+
+      <div className="listContainer">
+        <div>
+          <DemoUseEffect
+            url="https://jsonplaceholder.typicode.com/photos?_limit=5"
+            listTittle="PHOTOS"
+            list="title"
+          />
+        </div>
+        <div>
+          <DemoUseEffect
+            url="https://jsonplaceholder.typicode.com/todos?_limit=5"
+            listTittle="TODOS"
+            list="title"
+          />
+        </div>
+        <div>
+          <DemoUseEffect
+            url="https://jsonplaceholder.typicode.com/albums?_limit=5"
+            listTittle="ALBUMS"
+            list="title"
+          />
+        </div>
+      </div>
     </div>
   );
 }
